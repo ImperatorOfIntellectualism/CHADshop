@@ -82,7 +82,7 @@ app.post("/carthandler", (req, res) => {
   cart
   .findOne({ user: req.body.login })
   .then((user) => {
-    a = user.items//.split(',');
+    a = user.items
     res.send(JSON.stringify(a));
   });
 });
